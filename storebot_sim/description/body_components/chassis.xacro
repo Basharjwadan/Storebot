@@ -1,0 +1,142 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+
+
+    <xacro:property name="plate_radius" value="0.20"/>
+
+    <joint name="temp_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="temp"/>
+        <origin xyz="0 0 ${wheel_offset_z}"/>
+    </joint>
+
+
+    <link name="temp" >
+        <visual>
+            <origin xyz="0 0 0"/>
+            <geometry>
+                <cylinder radius="0.005" length="0.01"/>
+            </geometry>
+            <material name="white"/>
+        </visual>
+
+        <collision>
+            <origin xyz="0 0 0"/>
+            <geometry>
+                <cylinder radius="0.005" length="0.0"/>
+            </geometry>
+        </collision>
+
+    </link>
+    
+
+    <!-- BOT_PLATE LINK -->
+    <joint name="bot_plate_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="bot_plate"/>
+        <origin xyz="0 0 ${2*wheel_offset_z}"/>
+    </joint>
+
+    <link name="bot_plate">
+         <visual>
+            <origin xyz="0 0 0"/>
+            <geometry>
+                <cylinder radius="${plate_radius}" length="0.005"/>
+            </geometry>
+            <material name="orange"/>
+        </visual>
+
+         <collision>
+            <origin xyz="0 0 0"/>
+            <geometry>
+                <cylinder radius="${plate_radius}" length="0.005"/>
+            </geometry>
+        </collision>
+
+        <xacro:inertial_cylinder mass="0.5" radius="${plate_radius}" length="0.005">
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </xacro:inertial_cylinder>
+    </link>
+
+    <gazebo reference="bot_plate">
+        <material>Gazebo/Orange</material>
+    </gazebo>
+
+
+    <!-- BOT_PLATE LINK -->
+
+    <!-- MID_PLATE LINK -->
+    
+    <joint name="mid_plate_joint" type="fixed">
+        <parent link="bot_plate"/>
+        <child link="mid_plate"/>
+        <origin xyz="0 0 0.08"/>
+    </joint>
+
+   
+    <link name="mid_plate">
+         <visual>
+            <origin xyz="0 0 0"/>
+            <geometry>
+                <cylinder radius="${0.5*plate_radius}" length="0.005"/>
+            </geometry>
+            <material name="orange"/>
+        </visual>
+
+         <collision>
+            <origin xyz="0 0 0"/>
+            <geometry>
+                <cylinder radius="${0.5*plate_radius}" length="0.005"/>
+            </geometry>
+        </collision>
+
+        <xacro:inertial_cylinder mass="0.1" radius="${0.5*plate_radius}" length="0.005">
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </xacro:inertial_cylinder>
+    </link>
+
+    <gazebo reference="mid_plate">
+        <material>Gazebo/Orange</material>
+    </gazebo>
+
+    <!-- MID_PLATE LINK -->
+    
+    <!-- TOP_PLATE LINK -->
+    
+    <joint name="top_plate_joint" type="fixed">
+        <parent link="mid_plate"/>
+        <child link="top_plate"/>
+        <origin xyz="0 0 0.08"/>
+    </joint>
+
+   
+    <link name="top_plate">
+         <visual>
+            <origin xyz="0 0 0"/>
+            <geometry>
+                <cylinder radius="${plate_radius}" length="0.005"/>
+            </geometry>
+            <material name="orange"/>
+        </visual>
+
+         <collision>
+            <origin xyz="0 0 0"/>
+            <geometry>
+                <cylinder radius="${plate_radius}" length="0.005"/>
+            </geometry>
+        </collision>
+
+        <xacro:inertial_cylinder mass="0.1" radius="${plate_radius}" length="0.005">
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </xacro:inertial_cylinder>
+    </link>
+
+    <gazebo reference="top_plate">
+        <material>Gazebo/Orange</material>
+    </gazebo>
+
+    <!-- TOP_PLATE LINK -->
+
+ 
+</robot>
