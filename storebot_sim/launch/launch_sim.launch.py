@@ -18,6 +18,7 @@ def generate_launch_description():
     launch_file_dir = os.path.join( get_package_share_directory(package_name), 'launch')
     pkg_gazebo_ros = get_package_share_directory('gazebo_ros')
 
+    twist_mux_params = os.path.join(get_package_share_directory(package_name),'config','twist_mux.yaml')
 
     return LaunchDescription([
         IncludeLaunchDescription(
@@ -42,4 +43,14 @@ def generate_launch_description():
                         arguments=['-topic', 'robot_description',
                                    '-entity', 'storebot'],
                         output='screen'),
+
+        IncludeLaunchDescription(
+                PythonLaunchDescriptionSource([os.path.join(
+                    get_package_share_directory(package_name),'launch','joystick.launch.py'
+                )]), launch_arguments={'use_sim_time': 'true'}.items()
+        ),
+
+
+
+    
     ])

@@ -1,0 +1,221 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+   <!-- BOT_MID_SUPPORTS LINK -->
+    
+    <joint name="bot_sup_1_joint" type="fixed">
+        <parent link="bot_plate"/>
+        <child link="bot_mid_sup_1"/>
+        <origin xyz="0.05 0 0"/>
+    </joint>
+
+
+    <link name="bot_mid_sup_1">
+        <visual>
+            <origin xyz="0 0 0.04"/>
+            <geometry>
+                <box size="0.005 0.005 0.08"/>
+            </geometry>
+            <material name="white"/>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0.04"/>
+            <geometry>
+                <box size="0.005 0.005 0.08"/>
+            </geometry>
+        </collision>
+        <xacro:inertial_box mass="0.02" x="0.005" y="0.005" z="0.08">
+            <origin xyz="0 0 0.04" rpy="0 0 0"/>
+        </xacro:inertial_box>
+    </link>
+
+    <joint name="bot_sup_2_joint" type="fixed">
+        <parent link="bot_plate"/>
+        <child link="bot_mid_sup_2"/>
+        <origin xyz="-0.05 0 0"/>
+    </joint>
+
+
+    <link name="bot_mid_sup_2">
+        <visual>
+            <origin xyz="0 0 0.04"/>
+            <geometry>
+                <box size="0.005 0.005 0.08"/>
+            </geometry>
+            <material name="white"/>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0.04"/>
+            <geometry>
+                <box size="0.005 0.005 0.08"/>
+            </geometry>
+        </collision>
+        <xacro:inertial_box mass="0.02" x="0.005" y="0.005" z="0.08">
+            <origin xyz="0 0 0.04" rpy="0 0 0"/>
+        </xacro:inertial_box>
+    </link>
+
+    <joint name="bot_sup_3_joint" type="fixed">
+        <parent link="bot_plate"/>
+        <child link="bot_mid_sup_3"/>
+        <origin xyz="0 0.05 0"/>
+    </joint>
+
+
+    <link name="bot_mid_sup_3">
+        <visual>
+            <origin xyz="0 0 0.04"/>
+            <geometry>
+                <box size="0.005 0.005 0.08"/>
+            </geometry>
+            <material name="white"/>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0.04"/>
+            <geometry>
+                <box size="0.005 0.005 0.08"/>
+            </geometry>
+        </collision>
+        <xacro:inertial_box mass="0.02" x="0.005" y="0.005" z="0.08">
+            <origin xyz="0 0 0.04" rpy="0 0 0"/>
+        </xacro:inertial_box>
+    </link>
+
+    <joint name="bot_sup_4_joint" type="fixed">
+        <parent link="bot_plate"/>
+        <child link="bot_mid_sup_4"/>
+        <origin xyz="0 -0.05 0"/>
+    </joint>
+
+
+    <link name="bot_mid_sup_4">
+        <visual>
+            <origin xyz="0 0 0.04"/>
+            <geometry>
+                <box size="0.005 0.005 0.08"/>
+            </geometry>
+            <material name="white"/>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0.04"/>
+            <geometry>
+                <box size="0.005 0.005 0.08"/>
+            </geometry>
+        </collision>
+        <xacro:inertial_box mass="0.02" x="0.005" y="0.005" z="0.08">
+            <origin xyz="0 0 0.04" rpy="0 0 0"/>
+        </xacro:inertial_box>
+    </link>
+
+    <!-- BOT_MID_SUPPORTS LINK -->
+
+
+    <!-- MID_TOP_SUPPORTS LINK -->
+
+    <joint name="mid_sup_1_joint" type="fixed">
+        <parent link="mid_plate"/>
+        <child link="mid_top_sup_1"/>
+        <origin xyz="0.05 0 0"/>
+    </joint>
+
+
+    <link name="mid_top_sup_1">
+        <visual>
+            <origin xyz="0 0 0.04"/>
+            <geometry>
+                <box size="0.005 0.005 0.08"/>
+            </geometry>
+            <material name="white"/>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0.04"/>
+            <geometry>
+                <box size="0.005 0.005 0.08"/>
+            </geometry>
+        </collision>
+        <xacro:inertial_box mass="0.02" x="0.005" y="0.005" z="0.08">
+            <origin xyz="0 0 0.04" rpy="0 0 0"/>
+        </xacro:inertial_box>
+    </link>
+
+    <joint name="mid_sup_2_joint" type="fixed">
+        <parent link="mid_plate"/>
+        <child link="mid_top_sup_2"/>
+        <origin xyz="-0.05 0 0"/>
+    </joint>
+
+
+    <link name="mid_top_sup_2">
+        <visual>
+            <origin xyz="0 0 0.04"/>
+            <geometry>
+                <box size="0.005 0.005 0.08"/>
+            </geometry>
+            <material name="white"/>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0.04"/>
+            <geometry>
+                <box size="0.005 0.005 0.08"/>
+            </geometry>
+        </collision>
+        <xacro:inertial_box mass="0.02" x="0.005" y="0.005" z="0.08">
+            <origin xyz="0 0 0.04" rpy="0 0 0"/>
+        </xacro:inertial_box>
+    </link>
+
+    <joint name="mid_sup_3_joint" type="fixed">
+        <parent link="mid_plate"/>
+        <child link="mid_top_sup_3"/>
+        <origin xyz="0 0.05 0"/>
+    </joint>
+
+
+    <link name="mid_top_sup_3">
+        <visual>
+            <origin xyz="0 0 0.04"/>
+            <geometry>
+                <box size="0.005 0.005 0.08"/>
+            </geometry>
+            <material name="white"/>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0.04"/>
+            <geometry>
+                <box size="0.005 0.005 0.08"/>
+            </geometry>
+        </collision>
+        <xacro:inertial_box mass="0.02" x="0.005" y="0.005" z="0.08">
+            <origin xyz="0 0 0.04" rpy="0 0 0"/>
+        </xacro:inertial_box>
+    </link>
+
+    <joint name="mid_sup_4_joint" type="fixed">
+        <parent link="mid_plate"/>
+        <child link="mid_top_sup_4"/>
+        <origin xyz="0 -0.05 0"/>
+    </joint>
+
+
+    <link name="mid_top_sup_4">
+        <visual>
+            <origin xyz="0 0 0.04"/>
+            <geometry>
+                <box size="0.005 0.005 0.08"/>
+            </geometry>
+            <material name="white"/>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0.04"/>
+            <geometry>
+                <box size="0.005 0.005 0.08"/>
+            </geometry>
+        </collision>
+        <xacro:inertial_box mass="0.02" x="0.005" y="0.005" z="0.08">
+            <origin xyz="0 0 0.04" rpy="0 0 0"/>
+        </xacro:inertial_box>
+    </link>
+
+    <!-- MID_TOP_SUPPORTS LINK -->
+ 
+</robot>

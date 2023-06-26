@@ -10,8 +10,8 @@
             <!-- Wheel Information -->
             <left_joint>left_wheel_joint</left_joint>
             <right_joint>right_wheel_joint</right_joint>
-            <wheel_separation>0.35</wheel_separation>
-            <wheel_diameter>0.06</wheel_diameter>
+            <wheel_separation>0.374</wheel_separation>
+            <wheel_diameter>0.065</wheel_diameter>
 
 
             <!-- Limits -->
